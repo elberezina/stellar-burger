@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { TFeedsResponse, getFeedsApi, getOrderByNumberApi, getOrdersApi, orderBurgerApi } from '@api';
+import { TFeedsResponse, getFeedsApi, getOrderByNumberApi, getOrdersApi, orderBurgerApi } from '../../utils/burger-api';
 import { TOrder } from '@utils-types';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
@@ -32,7 +32,7 @@ export const getOrderByNumber = createAsyncThunk(
   async (number: number) => await getOrderByNumberApi(number)
 );
 
-const initialState: Order = {
+export const initialState: Order = {
   orderRequest: false,
   orderModalData: null,
   orders: [],

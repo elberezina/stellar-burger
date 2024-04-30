@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "accessToken": "eyJhbG",
+  "refreshToken": "978aa1",
+  "user": {
+    "email": "ya873478@ya.ru",
+    "name": "Жак-Ив Кусто"
+  }
+}
