@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { getIngredientsApi } from '@api';
+
 import { TIngredient } from '@utils-types';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getIngredientsApi } from '../../utils/burger-api';
 
 interface Ingredients{
     ingredients: TIngredient [];
@@ -14,7 +15,7 @@ interface Ingredients{
     async () => await getIngredientsApi()
   );
 
-  const initialState: Ingredients = {
+  export const initialState: Ingredients = {
     ingredients: [],
     isLoading: false,
     error: null,
@@ -40,12 +41,10 @@ interface Ingredients{
         builder.addCase(getIngredients.fulfilled, (state, action) => {
           state.isLoading = false;
           state.ingredients = action.payload;
-           
        });
     }
   });
 
-  
   // export default ingredientsSlice.reducer
   // export const isLoading = (state: RootState) => state.ingredients.isLoading;
   export const ingredientsReducer = ingredientsSlice.reducer;

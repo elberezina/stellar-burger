@@ -8,7 +8,7 @@ interface BurgerConstructor {
   ingredients: TConstructorIngredient[];
 }
 
-const initialState: BurgerConstructor = {
+export const initialState: BurgerConstructor = {
   bun: null,
   ingredients: []
 };
@@ -18,7 +18,7 @@ export const burgerConstructorSlice = createSlice({
     initialState,
     reducers: {
         addItems: (state,  action) => {
-            const payloadId = {...action.payload, id:nanoid()};
+            const payloadId = {...action.payload};
             if (action.payload.type === 'bun') {
               state.bun = payloadId
             } else {
@@ -27,8 +27,8 @@ export const burgerConstructorSlice = createSlice({
         },
         deleteItems: (state, action) => {
           if (action.payload.type !== 'bun') {
-            state.ingredients =  state.ingredients.filter((ingredients) => 
-            ingredients.id !== action.payload)
+            state.ingredients = state.ingredients.filter((ingredient) =>
+              ingredient._id !== action.payload._id);
           }
         },
         clearItems: (state) =>{

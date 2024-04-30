@@ -9,7 +9,7 @@ import {
   TLoginData,
   TRegisterData,
   updateUserApi
-} from '@api';
+} from '../../utils/burger-api';
 import { TUser } from '@utils-types';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { deleteCookie, getCookie, setCookie } from '../../utils/cookie';
@@ -73,7 +73,7 @@ export const logout = createAsyncThunk('user/logout', async () => {
   return response;
 });
 
-const initialState: User = {
+export const initialState: User = {
   isAuthChecked: false,
   user: null,
   error: undefined
