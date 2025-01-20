@@ -1,4 +1,11 @@
-# Проектная работа 11-го спринта
+# Проектная работа «Stellar Burger»
+
+«Stellar Burgers» — это веб-приложение космической бургерной, где можно собрать и заказать бургер.
+
+<img width="1306" alt="image" src="https://github.com/user-attachments/assets/714d82ba-7921-4757-9b24-06bb5354ffb7" />
+
+
+[Деплой проекта](https://elberezina.github.io/stellar-burger/)
 
 [Макет](<https://www.figma.com/file/vIywAvqfkOIRWGOkfOnReY/React-Fullstack_-Проектные-задачи-(3-месяца)_external_link?type=design&node-id=0-1&mode=design>)
 
@@ -14,6 +21,3 @@
 
 4. Настройте авторизацию и создайте защищённые роуты.
 
-## Важно:
-
-Для корректной работы запросов к серверу необходимо добавить переменную BURGER_API_URL в окружение. Сама ссылка находится в файле `.env.example`.
